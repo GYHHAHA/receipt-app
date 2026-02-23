@@ -1,0 +1,27 @@
+{
+  "sidebar": {
+    "dataPanel": "Data Panel",
+    "receipt": "Receipt",
+    "invoice": "Invoice",
+    "analytics": "Analytics",
+    "fileExport": "File Export",
+    "userCenter": "User Center",
+    "userProfile": "User Profile",
+    "company": "Company",
+    "activity": "Activity",
+    "subscription": "Subscription",
+    "contactUs": "Contact Us"
+  },
+  "topnav": {
+    "language": "Language",
+    "theme": "Theme",
+    "profile": "Profile",
+    "logout": "Logout",
+    "searchPlaceholder": "Search menu..."
+  },
+  "languages": {
+    "en": "English",
+    "zh": "中文",
+    "fr": "Français"
+  }
+}

@@ -32,7 +32,7 @@ function fileToBase64(file: File): Promise<string> {
 export async function analyzeReceiptImage(
   file: File
 ): Promise<GeminiReceiptResult> {
-  const model = genAI.getGenerativeModel({ model: "gemini-3-flash-preview" });
+  const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
   const base64Data = await fileToBase64(file);
 

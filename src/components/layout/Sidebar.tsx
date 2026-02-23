@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "@tanstack/react-router";
 import { useSidebar } from "@/contexts/SidebarContext";
 import {
   Receipt,
@@ -19,6 +20,7 @@ import SidebarMenuItem from "./SidebarMenuItem";
 
 export default function Sidebar() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const { collapsed, toggleSidebar } = useSidebar();
 
   return (
@@ -34,7 +36,8 @@ export default function Sidebar() {
           <img
             src="https://dashboard.receiptcanada.com/assets/images/datamond-with-text_logo.png"
             alt="Logo"
-            className="h-8 object-contain brightness-0 opacity-70 dark:invert dark:opacity-90"
+            onClick={() => navigate({ to: "/" })}
+            className="h-8 object-contain brightness-0 opacity-70 dark:invert dark:opacity-90 cursor-pointer hover:opacity-100 transition-opacity"
           />
         )}
         <button

@@ -2,10 +2,10 @@ import {
   createRouter,
   createRoute,
   createRootRoute,
-  redirect,
   Outlet,
 } from "@tanstack/react-router";
 import DashboardLayout from "@/components/layout/DashboardLayout";
+import HomePage from "@/pages/HomePage";
 import ReceiptPage from "@/pages/data-panel/ReceiptPage";
 import InvoicePage from "@/pages/data-panel/InvoicePage";
 import AnalyticsPage from "@/pages/data-panel/AnalyticsPage";
@@ -23,9 +23,7 @@ const rootRoute = createRootRoute({
 const indexRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/",
-  beforeLoad: () => {
-    throw redirect({ to: "/data-panel/receipt" });
-  },
+  component: HomePage,
 });
 
 const dataPanelRoute = createRoute({
